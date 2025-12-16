@@ -1,9 +1,27 @@
 :root {
   /* Colors */
-  --color-primary: #0070f3;
+  --color-primary-50:  #eef0ff;
+  --color-primary-100: #dfe3ff;
+  --color-primary-200: #c0c7ff;
+  --color-primary-300: #9ea7ff;
+  --color-primary-400: #6f78e8;
+  --color-primary-500: #303698; /* base */
+  --color-primary-600: #2a2f86;
+  --color-primary-700: #242872;
+  --color-primary-800: #1d215c;
+  --color-primary: #303698;
   --color-primary-hover: #0059c1;
   --color-neutral-100: #ffffff;
   --color-neutral-900: #111111;
+
+  --color-primary: var(--color-primary-700);
+  --color-primary-hover: var(--color-primary-800);
+  --color-primary-active: var(--color-primary-900);
+
+  /* Subtle surfaces (no text or dark text only) */
+  --color-primary-subtle: var(--color-primary-100);
+  --color-primary-muted: var(--color-primary-200);
+  --color-text-inverse: var(--color-neutral-100);
 
   /* Spacing */
   --space-1: 4px;
