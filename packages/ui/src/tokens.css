@@ -1,0 +1,17 @@
+:root {
+  /* Colors */
+  --color-primary: #0070f3;
+  --color-primary-hover: #0059c1;
+  --color-neutral-100: #ffffff;
+  --color-neutral-900: #111111;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+}
