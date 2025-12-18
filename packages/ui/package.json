@@ -3,10 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./*": "./src/*.tsx",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist.index.js"
+    }
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
+    "build": "tsc -p tsconfig.build.json",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
     "storybook:dev": "storybook dev -p 6006",
