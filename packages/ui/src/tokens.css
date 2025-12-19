@@ -13,10 +13,18 @@
   --color-primary-hover: #0059c1;
   --color-neutral-100: #ffffff;
   --color-neutral-900: #111111;
+  --color-gray-50: #f5f5f5;
+  --color-gray-100: #e0e0e0;
+  --color-gray-200: #c2c2c2;
+  --color-gray-300: #a3a3a3;
+  --color-gray-400: #858585;
+  --color-gray-500: #666666;
 
   --color-primary: var(--color-primary-700);
   --color-primary-hover: var(--color-primary-800);
   --color-primary-active: var(--color-primary-900);
+  --color-surface-disabled: var(--color-gray-200);
+  --color-text-disabled: var(--color-gray-400);
 
   /* Subtle surfaces (no text or dark text only) */
   --color-primary-subtle: var(--color-primary-100);
