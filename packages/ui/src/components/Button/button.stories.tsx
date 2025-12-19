@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button, type ButtonProps } from "./button";
+import { Button } from "./button";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -22,12 +22,19 @@ export const Secondary: Story = {
   args: { variant: "secondary" },
 };
 
+export const Disabled = {
+  args: {
+    variant: 'primary',
+    disabled: true,
+    children: 'Disabled',
+  },
+};
 export const Sizes: Story = {
-  render: (args: ButtonProps) => (
+  render: () => (
     <div style={{ display: "flex", gap: 12 }}>
-      <Button {...args} size="small">Small</Button>
-      <Button {...args} size="medium">Medium</Button>
-      <Button {...args} size="large">Large</Button>
+      <Button size="small">Small</Button>
+      <Button size="medium">Medium</Button>
+      <Button size="large">Large</Button>
     </div>
   ),
 };
