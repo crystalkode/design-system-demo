@@ -81,8 +81,7 @@
 .ds-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  background-color: var(--color-surface-disabled);
+  color: var(--color-text-disabled);
 }
 
-.ds-button:disabled:hover {
-  background-color: inherit;
-}
