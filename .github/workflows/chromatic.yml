@@ -1,0 +1,37 @@
+name: Chromatic
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/ui
+          onlyChanged: true
+          buildScriptName: storybook:build
