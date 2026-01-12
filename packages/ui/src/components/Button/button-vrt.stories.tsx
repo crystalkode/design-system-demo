@@ -32,8 +32,6 @@ const states = [
   { label: "Disabled", props: { disabled: true } },
 ];
 
-const colors: Array<ButtonProps["color"]> = ["primary", "secondary"];
-const variants: Array<ButtonProps["variant"]> = ["fill", "outlined", "text"];
 const sizes: Array<ButtonProps["size"]> = ["small", "medium", "large"];
 
 type ButtonCombination = {
@@ -55,14 +53,14 @@ export const VRT: Story = {
     
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       {buttonCombinations.map(({ color, variant }) => (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div key={`${color}-${variant}`} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div>
-            <span style={{fontSize: 18}}>
+            <span key={`${color}-${variant}`} style={{fontSize: 18}}>
               {color}-{variant}
             </span>
           </div>
           {sizes.map((size) => (
-            <div >
+            <div key={`${size}`} >
               <span style={{fontSize: 16}}>{size}</span>
               <div style={{ display: 'flex', gap: '8px' }}>
                 {states.map(({label, props})=>(
