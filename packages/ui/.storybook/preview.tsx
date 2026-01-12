@@ -1,3 +1,4 @@
+/// <reference path="../global.d.ts" />
 import type { Preview } from "@storybook/react-vite";
 import "../src/tokens.css";
 

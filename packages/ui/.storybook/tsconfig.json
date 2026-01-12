@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    // Required for Storybook config files
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    // Required for CSS imports inside preview.ts
+    "allowArbitraryExtensions": true,
+    "types": ["node"]
+  },
+  "include": [
+    "../src",
+    "../global.d.ts",
+    "./**/*"
+  ]
+}
