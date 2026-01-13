@@ -6,7 +6,12 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
   args: {
+    color: "primary",
+    variant:"fill",
     children: "Button",
+  },
+    parameters: {
+    chromatic: { disableSnapshot: true },
   },
 };
 
@@ -14,12 +19,26 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  args: { variant: "primary" },
+export const Playground: Story = {};
+
+export const Colors: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: 12 }}>
+      <Button color="primary">Small</Button>
+      <Button color="secondary">Small</Button>
+    </div>
+  ),
 };
 
-export const Secondary: Story = {
-  args: { variant: "secondary" },
+export const Variants: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: 12 }}>
+      <Button variant="fill">Small</Button>
+      <Button variant="outlined">Small</Button>
+      <Button variant="text">Small</Button>
+
+    </div>
+  ),
 };
 
 export const Disabled = {
