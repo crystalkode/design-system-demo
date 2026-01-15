@@ -48,7 +48,7 @@ const buttonCombinations: ButtonCombination[] = [
   { color: "secondary", variant: "text" },
 ];
 
-export const VRT: Story = {
+export const VRTButton: Story = {
   render: () => (
     
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
