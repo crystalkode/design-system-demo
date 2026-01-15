@@ -19,7 +19,8 @@
   --color-gray-400: #858585;
   --color-gray-500: #666666;
 
-  --color-border-focus: #5d6bf6;
+  /* --color-border-focus: #5d6bf6; */
+  --color-border-focus: #7D013F;
 
   --color-primary: var(--color-primary-500);
   --color-primary-hover: var(--color-primary-700);
