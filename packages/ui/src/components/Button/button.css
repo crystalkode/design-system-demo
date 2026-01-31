@@ -18,6 +18,7 @@
   background-color: var(--btn-bg);
   color: var(--btn-fg);
   border: 1px solid var(--btn-border);
+  gap: 8px;
 
   cursor: pointer;
   user-select: none;
