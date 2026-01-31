@@ -48,6 +48,7 @@ export const Disabled = {
     children: 'Disabled',
   },
 };
+
 export const Sizes: Story = {
   render: () => (
     <div style={{ display: "flex", gap: 12 }}>
@@ -56,4 +57,12 @@ export const Sizes: Story = {
       <Button size="large">Large</Button>
     </div>
   ),
+};
+
+export const Loading = {
+  args: {
+    variant: 'primary',
+    loading: true,
+    children: 'Loading',
+  },
 };
