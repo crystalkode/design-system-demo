@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import "./button.css";
+import { Spinner } from "../Spinner/spinner";
 
 type ButtonColor = "primary" | "secondary";
 type ButtonVariant = "fill" | "outlined" | "text";
@@ -10,6 +11,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   color?: ButtonColor;
   variant?: ButtonVariant;
   size?: ButtonSize;
+  loading?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,6 +20,8 @@ export const Button: React.FC<ButtonProps> = ({
   size = "medium",
   className,
   children,
+  loading,
+  disabled,
   ...props
 }) => {
   return (
@@ -29,9 +33,11 @@ export const Button: React.FC<ButtonProps> = ({
         `ds-button--${size}`,
         className
       )}
+      disabled={loading || disabled}
       {...props}
     >
       {children}
+      {loading && <Spinner/>}
     </button>
   );
 };
